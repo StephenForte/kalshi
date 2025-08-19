@@ -26,6 +26,9 @@ For each market, the application shows:
 
 ## Getting Started
 
+### 🌐 **Live Demo**
+**View the live application**: [https://stephenforte.github.io/kalshi/](https://stephenforte.github.io/kalshi/)
+
 ### Prerequisites
 
 - A modern web browser (Chrome, Firefox, Safari, Edge)
@@ -160,6 +163,20 @@ For issues or questions:
 2. Ensure you have an active internet connection
 3. Try refreshing the page if data doesn't load initially
 4. Make sure you're running through a local server (not opening the file directly)
+
+---
+
+## GitHub Pages Deployment
+
+This application is automatically deployed to GitHub Pages when changes are pushed to the main branch.
+
+### Deployment Process
+1. **Automatic**: GitHub Actions workflow deploys on every push to main
+2. **Manual**: Can be triggered from GitHub repository settings
+3. **URL**: https://stephenforte.github.io/kalshi/
+
+### Demo Mode
+When CORS proxies are unavailable, the application automatically switches to demo mode and displays sample data to showcase the interface and functionality.
 
 ---
 

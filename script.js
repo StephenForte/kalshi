@@ -73,11 +73,13 @@ class KalshiMarketViewer {
                 // Use sample data as fallback
                 const sampleData = this.getSampleData();
                 this.processMarketData(sampleData);
+                this.showDemoMode(); // Show demo mode indicator
                 return;
             }
 
             const data = await response.json();
             this.processMarketData(data);
+            this.hideDemoMode(); // Hide demo mode indicator
 
         } catch (error) {
             console.error('Error loading markets:', error);
@@ -162,6 +164,20 @@ class KalshiMarketViewer {
 
         // Log the number of active markets found
         console.log(`Found ${this.allMarkets.length} active markets out of ${this.totalMarkets} total markets`);
+    }
+
+    showDemoMode() {
+        const demoElement = document.getElementById('demoMode');
+        if (demoElement) {
+            demoElement.style.display = 'inline-block';
+        }
+    }
+
+    hideDemoMode() {
+        const demoElement = document.getElementById('demoMode');
+        if (demoElement) {
+            demoElement.style.display = 'none';
+        }
     }
 
     getSampleData() {
